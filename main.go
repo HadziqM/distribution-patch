@@ -70,7 +70,7 @@ func decodeByteaToItems(byteData []byte) ([]Item, error) {
 		code, _ := strconv.ParseInt(hexData[index:index+4], 16, 32) // 4-byte integer (8 hex digits)
 		index += 4 + 4                                              // Skip padding "0000"
 
-		count, _ := strconv.ParseInt(hexData[index:index+4], 16, 16) // 4 hex digits
+		count, _ := strconv.ParseInt(hexData[index:index+4], 16, 32) // 4 hex digits
 		index += 4 + 8                                               // Skip padding "00000000"
 
 		items = append(items, Item{
